@@ -82,7 +82,7 @@ from participated, accident
 where participated.report_num = accident.report_num
 and accident_date like '%08';
 
-select participated.report_num
+select count(participated.report_num)
 from participated, car
 where participated.reg_num = car.reg_num
 and car.model = 'Audi';
